@@ -18,3 +18,31 @@ $(function(){
 
   $.get('/notes', refresh);
 })
+
+
+angular.module('patternfly.navigation').controller('vertNavController', ['$scope',
+  function ($scope) {
+    $scope.navigations = [
+            {
+              title: "Dashboard",
+              iconClass: "fa fa-dashboard",
+              uiSref: "dashboard",
+              uiSrefOptions: { someKey: 'SomeValue' }
+            },
+            {
+              title: "Dolor",
+              iconClass : "fa fa-shield",
+              uiSref: "dolor"
+            },
+            {
+              title: "Ipsum",
+              iconClass : "fa fa-space-shuttle",
+              uiSref: "ipsum"
+            },
+            {
+              title: "Exit Demo"
+            }
+          ];
+
+  }
+]);
